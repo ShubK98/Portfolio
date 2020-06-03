@@ -167,10 +167,7 @@ header {
     border-color:transparent;
 }
 
-.logo11
-{   
-   
-}
+
 
 .nav {
     position: fixed;
@@ -681,17 +678,7 @@ header {
     margin: 0 auto;
     
 }
-.abt
-{
-    background-color: white;
-    clip-path: polygon(0 0, 100% 0 , 100% calc(100% - 4vw), 0 100%);
-    margin-bottom: 0px;
-    z-index: 100;
-}
-.abt1
-{
-    background-color: #9F9F9F;
-}
+
 
 .about-me__img {
     box-shadow: var(--bs);
@@ -710,6 +697,7 @@ header {
     
     .section__title--about {
         grid-area: title;
+       
     }
     
     .section__subtitle--about {
@@ -739,6 +727,19 @@ header {
         position: relative;
         display:none;
         z-index: 2;
+    }
+    .section__title--about {
+        text-align: center;
+    }
+    .about-me__body{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .section__subtitle--about{
+        border-radius: 4px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 } 
                                                             
