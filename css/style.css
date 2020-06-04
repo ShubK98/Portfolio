@@ -58,6 +58,8 @@ body {
     border-radius: 9px;
 }
 
+
+
 .about-me__img
     { border:4px solid rgb(100, 100, 100);
       padding:4px;
@@ -234,11 +236,12 @@ header {
                                     z-index: 10;
                                     border-radius: 10%;
                                    
-                                    border-bottom: 4px solid rgb(84, 130, 168);
-                                    border-right: 4px solid  rgb(84, 130, 168);
+                                 /*   border-bottom: 4px solid rgb(84, 130, 168);
+                                    border-right: 4px solid  rgb(84, 130, 168);     */
 
-                                    border-top:  1px solid grey;
-                                    border-left:  1px solid grey;
+                                   border: 4px solid #787878;
+                                   border-right:4px solid #383838;
+                                   border-bottom:4px solid #383838;
                                     z-index: 200;
                                 }
                                 @media (max-width: 600px)
@@ -252,11 +255,12 @@ header {
 
                                 .ContactMe:Hover
                                 {   
-                                    border-top: 4px solid  rgb(84, 130, 168);
-                                    border-left: 4px solid rgb(84, 130, 168);
-                                    
-                                    border-bottom: 1px solid grey;
-                                    border-right: 1px solid grey;
+                                  /*  border-top: 4px solid  rgb(84, 130, 168);
+                                    border-left: 4px solid rgb(84, 130, 168);   */
+                                    border: 4px solid #787878;
+                                    border-left:4px solid #383838;
+                                    border-top:4px solid #383838;
+                                    transition: 600ms;
                                 }                                                   
 
                                 .list
@@ -270,7 +274,7 @@ header {
                                     width: fit-content;
                                     background-color: var(--clr-dark);
                                     border-radius: 5px;
-                                    border: 2px solid blacks;
+                                    
                                     transform:translateX(-400%);
                                     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
                                     z-index: 4;
@@ -305,7 +309,7 @@ header {
                                     width:70px;
                                     color: black;
                                     background-color: white;
-                                    font-weight: 700;
+                                    font-weight: 550;
                                     font-size: xx-large;
                                     padding-left: 0px;
                                     padding: 4px 0px;
@@ -320,9 +324,6 @@ header {
                                 .social-list__item1:hover   {
                                     border: 4px solid white;
                                     background-color: #A9CCE3  ;
-                                    
-                                  
-                                    
                                 }
                                 .social-list__item1:hover #spn
                                 {
@@ -366,8 +367,8 @@ header {
                                         }    
                                         .list
                                         {
-                                            width:70%;
-                                            opacity:0.92;
+                                            width: 60%;
+                                            
                                         }
                                     }             
 
@@ -536,7 +537,26 @@ header {
         width: calc(100% + 1.5em);
     }
 }
-                                                                /*
+@media (max-width: 600px) {
+    .intro__img {
+     max-width: 150px;
+     float: right;
+     position: absolute;
+     top:12em;
+     left: 12em;
+    }
+    .section__subtitle--intro{width:100%;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    }
+    
+}
+@media (max-width: 350px) {
+    .intro__img {
+    display: none;
+
+    }
+                                                            }                                                            /*
 @media (max-width: 600px)
 {
 
@@ -604,14 +624,14 @@ header {
                                                                     margin:auto;
                                                                     height:fit-content;
                                                                     padding-bottom: 12vw;
-                                                                    padding-top: 10vh;
+                                                                    padding-top: 16vh;
                                                                 }
                                                                 
                                                                 .Res
                                                                 {
                                                                     background-color: #9F9F9F;
-                                                                    clip-path: polygon(0 0, 100% 0 , 100% calc(100% - 4vw), 0 100%);
-                                                                    margin-bottom: -4vw;
+                                                                    clip-path: polygon(0 6vw, 100% 0 , 100% calc(100% - 6vw), 0 100%);
+                                                                    margin-bottom: -6vw;
                                                                 }
                                                                 .section__title--Res
                                                                 {   
@@ -658,7 +678,8 @@ header {
                                                                 
                                                                     .Myres 
                                                                         {
-                                                                        
+                                                                        padding-top: 10vh;
+                                                                        padding-bottom: 6vh;
                                                                         min-height: 400px;
                                                                         }
                                                                     .buttn
@@ -692,7 +713,7 @@ header {
             "title img"
             "subtitle img"
             "text img";
-        grid-column-gap: 2em;
+        grid-column-gap: 1em;
     }                                                                           
     
     .section__title--about {
@@ -713,8 +734,8 @@ header {
     .about-me__img {
         grid-area: img;
         position: relative;
-        min-height: 360px;
-        min-width: 240px;
+        min-height: 300px;
+        min-width: 200px;
         z-index: 2;
     }
 }
@@ -751,6 +772,7 @@ header {
     background-color: var(--clr-dark);
     color: var(--clr-light);
     text-align: center;    
+    padding-top: 8vw;
 }
 
 .portfolio {
