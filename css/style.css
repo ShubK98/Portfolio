@@ -271,7 +271,7 @@ header {
                                     top: 8.5em;
                                     width: 95px;
                                     padding:8px;
-                                    width: fit-content;
+                                    min-width:fit-content;
                                     background-color: var(--clr-dark);
                                     border-radius: 5px;
                                     
@@ -288,6 +288,10 @@ header {
 
                                     .list {
                                       z-index: 20;
+                                      min-width: 226px;
+                                      max-width: 240px;
+                                      border-top-right-radius: 30px;
+                                      border-bottom-right-radius: 30px;
                                     }    
                                 }
 
