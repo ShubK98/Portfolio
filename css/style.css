@@ -172,9 +172,18 @@ header {
                 
                    min-height: 3.2em;
                   /* background-color: rgb(68, 68, 68);  */
-                  background-image: linear-gradient(to left, #303030 , #777);
-                   
+                  background-image: linear-gradient(to left ,coral, whitesmoke, #008080b4 );
+                  background-size: 400%;
+                  animation: bg-hdr 15s infinite alternate;
                 }    
+                @keyframes bg-hdr{
+                    0%{
+                        background-position: left;
+                    }
+                    100%{
+                        background-position: right;
+                    }
+                }
             }     
 
 .logo {
@@ -487,6 +496,13 @@ header {
     background-color: transparent;
     padding: 1em;
     border-radius: 18px; 
+}
+@media(max-width:600px)
+{
+    .nav-toggle{
+        background-color: #00000050;
+        border-radius: 5px;
+    }
 }
 
 .nav-open .nav {
