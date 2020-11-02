@@ -1219,9 +1219,10 @@ span3{ font-size:large;
 {
     width: 30%;
     height: 10em;
-    background-color: #005180;
-    background-image: linear-gradient(to left bottom ,teal, skyblue,#005180, #005180,#005180);
-    bottom: 5%;
+    background-color: #005180a9;
+    
+    background-image: linear-gradient(to left bottom ,#0080808f, #87cfebd7,#00518096, #005180cb,#005180d7);
+    bottom: 2%;
     transform: translate(-50%,-50%);
     margin-left: 50%;    
     position: fixed;
@@ -1229,9 +1230,9 @@ span3{ font-size:large;
     border-radius: 4px; 
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    border: 3px solid  #005180;
-    border-top:2px solid #0b5b8a ;
-    border-left: 3px solid #0b5b8a ;
+    border: 3px solid  #00518069;
+    border-top:2px solid #0b5b8a69 ;
+    border-left: 3px solid #0b5b8a69 ;
     overflow: hidden;
     transition: 500ms ease-in-out;
     animation: msgboio 8s ease-in;
@@ -1253,7 +1254,7 @@ span3{ font-size:large;
 {  padding: 2px 4px;
     float: right;
     background-color: #e72d2d;
-    color: rgba(255, 255, 255, 0.938);
+    color: #ffffff;
     border-radius: 5px;
     margin-bottom: 4px;
 }
@@ -1288,7 +1289,7 @@ span3{ font-size:large;
 @media(max-width:600px)
 {
     .boio{
-        width: 88%;
+        width: 85%;
         margin-left: 50%;
         height:10em;
     }
