@@ -1278,7 +1278,7 @@ span3{ font-size:large;
 {   position: relative;
     height: 80%;
     width: 100%;
-    background-color: thistle;
+    background-color: #ddc7dd;
     clear:both;
     border-radius: 3px;
     color: black;
@@ -1287,6 +1287,21 @@ span3{ font-size:large;
     padding-top: 0.5em;
 }
 @media(max-width:600px)
+{
+    .boio{
+        width: 85%;
+        margin-left: 50%;
+        height:10em;
+    }
+    .boitxt{
+        font-size: large;
+    }
+    
+    .cauboi{
+        margin-right: 10px;
+    }
+}
+@media(max-width:900px)
 {
     .boio{
         width: 85%;
