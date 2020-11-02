@@ -24,6 +24,22 @@ ConTogg.addEventListener('click', () => {
     });
 
  
+
+
+    // Close the message
+
+    const Crosscloser = document.querySelector('.boicloser');
+
+    Crosscloser.addEventListener('click', () => {
+            document.body.classList.toggle ('Closeboi');
+    });
+
+
+
+
+
+
+
     
     
 //close contact list on , not on target 
