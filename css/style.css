@@ -1223,6 +1223,8 @@ span3{ font-size:large;
     background-color: #005180a9;
     
     background-image: linear-gradient(to left bottom ,#0080808f, #87cfebd7,#00518096, #005180cb,#005180d7);
+    background-size: 300%;
+
     bottom: 2%;
     transform: translate(-50%,-50%);
     margin-left: 50%;    
