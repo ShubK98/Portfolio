@@ -239,7 +239,7 @@ header {
     text-align: center;
     border:2px  solid white;
     border-radius: 7px;
-    padding:10px 0px;
+    padding:2px 0px;
     overflow:hidden;
     
     }
@@ -1236,6 +1236,7 @@ span3{ font-size:large;
     overflow: hidden;
     transition: 500ms ease-in-out;
     animation: msgboio 8s ease-in;
+    animation: msggrad 10s ease-in infinite alternate;
 }
 .boicloser
 {
@@ -1344,3 +1345,15 @@ span3{ font-size:large;
         
     }
 }
+
+@keyframes msggrad
+{
+
+    0%
+    {
+        background-position: left;
+    }
+    100%
+    {
+        background-position: right;
+    }
