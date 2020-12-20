@@ -1275,6 +1275,10 @@ span3{ font-size:large;
 {
     margin-top: 0.5em;
 }
+.boitxt p
+{
+    margin: 0;
+}
 .boinboi
 {   position: relative;
     height: 80%;
