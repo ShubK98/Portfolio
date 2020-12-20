@@ -513,6 +513,7 @@ header {
 
 .nav-open .nav-toggle {
     position: fixed;
+    background-color: transparent;
 }
 
 .nav-open .hamburger {
