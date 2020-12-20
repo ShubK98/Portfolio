@@ -229,7 +229,7 @@ header {
     align-items: center;
     margin: 0;
     padding:0;
-    background-color: var(--clr-dark);
+    background-color: var(--clr-dark); 
 }
 
 .nav__item
@@ -238,8 +238,6 @@ header {
     min-width:450px;
     text-align: center;
     border:2px  solid white;
-    border-bottom: 2px  solid #6b6b6b;
-    border-right: 2px  solid #6b6b6b;
     border-radius: 7px;
     padding:10px 0px;
     overflow:hidden;
@@ -504,7 +502,7 @@ header {
 @media(max-width:600px)
 {
     .nav-toggle{
-        background-color: #00000036;
+        background-color: #00000050;
         border-radius: 5px;
     }
 }
@@ -515,7 +513,6 @@ header {
 
 .nav-open .nav-toggle {
     position: fixed;
-    background-color: transparent;
 }
 
 .nav-open .hamburger {
@@ -1225,7 +1222,6 @@ span3{ font-size:large;
     background-color: #005180a9;
     
     background-image: linear-gradient(to left bottom ,#0080808f, #87cfebd7,#00518096, #005180cb,#005180d7);
-    background-size: 300%;
     bottom: 2%;
     transform: translate(-50%,-50%);
     margin-left: 50%;    
@@ -1240,33 +1236,27 @@ span3{ font-size:large;
     overflow: hidden;
     transition: 500ms ease-in-out;
     animation: msgboio 8s ease-in;
-    animation: msggrad 10s ease-in infinite alternate;
 }
 .boicloser
-{   position: relative;
-    top: -8px;
+{
     background-color: transparent;
     padding:2px;
     float: right;
-   transform: scale(1.2);
 }
 .crossboi
 {
     margin: 8px;
-    margin-top: 16px ;
     margin-left: 1.5em;
     color: white;
-    text-shadow: 2px 2px 4px #000000;
     
 }
 .fa-2x
-{  padding: 0px 2px;
+{  padding: 2px 4px;
     float: right;
     background-color: #e72d2d;
     color: #ffffff;
     border-radius: 5px;
     margin-bottom: 4px;
-    text-shadow: none;
 }
 .fa-2x:hover{
     background-color:  #e7582d;
@@ -1284,7 +1274,6 @@ span3{ font-size:large;
 {
     margin-top: 0.5em;
 }
-.boitxt p{margin: 0;}
 .boinboi
 {   position: relative;
     height: 80%;
@@ -1302,8 +1291,6 @@ span3{ font-size:large;
     .boio{
         width: 85%;
         margin-left: 50%;
-    transform: translate(-50%,-50%);
-
         height:10em;
     }
     .boitxt{
@@ -1314,7 +1301,7 @@ span3{ font-size:large;
         margin-right: 10px;
     }
 }
-/*@media(max-width:900px)
+@media(max-width:900px)
 {
     .boio{
         width: 85%;
@@ -1328,7 +1315,7 @@ span3{ font-size:large;
     .cauboi{
         margin-right: 10px;
     }
-}*/
+}
 
 .Closeboi .boio
 {  
@@ -1343,6 +1330,7 @@ span3{ font-size:large;
     0%
     {
         opacity: 0;
+       
     }
 
     80%
@@ -1353,19 +1341,6 @@ span3{ font-size:large;
     100%
     {
         opacity: 1;
+        
     }
-}
-
-@keyframes msggrad
-{
-
-    0%
-    {
-        background-position: left;
-    }
-    100%
-    {
-        background-position: right;
-    }
-
 }
