@@ -1220,16 +1220,15 @@ span3{ font-size:large;
 {
     width: 30%;
     height: 10em;
-    background-color: #005180a9;
+    background-color: #00518057;
     
-    background-image: linear-gradient(to left bottom ,#0080808f, #87cfebd7,#00518096, #005180cb,#005180d7);
+    background-image: linear-gradient(to left bottom ,#0080808f, #87cfebd7, #005180cb,#005180d7);
     background-size: 300%;
-
+    
     bottom: 2%;
     transform: translate(-50%,-50%);
     margin-left: 50%;    
     position: fixed;
-
     border-radius: 4px; 
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -1239,7 +1238,7 @@ span3{ font-size:large;
     overflow: hidden;
     transition: 500ms ease-in-out;
     animation: msgboio 8s ease-in;
-    animation: msggrad 10s ease-in infinite alternate;
+    /* animation: msggrad 10s ease-in infinite alternate; */
 }
 .boicloser
 {
@@ -1249,6 +1248,7 @@ span3{ font-size:large;
 }
 .crossboi
 {
+    
     margin: 8px;
     margin-left: 1.5em;
     color: white;
@@ -1364,3 +1364,4 @@ span3{ font-size:large;
     {
         background-position: right;
     }
+}
