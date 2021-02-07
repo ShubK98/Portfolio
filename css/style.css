@@ -60,11 +60,10 @@ body {
 }
 .intro__img:hover
 {
-    border-right-color: cornflowerblue ;
-    border-bottom-color: cornflowerblue;
-    border-left-color: cyan;
-    border-top-color: cyan;
-    
+    border-right-color: #6494edc2 ;
+    border-bottom-color: #6494edc2;
+    border-left-color: #00ffffc2;
+    border-top-color:  #00ffffc2;
 }
 
 .about-me__img
@@ -484,6 +483,8 @@ header {
   
 }
 
+
+.nav-toggle:focus {outline-style: none;}
 .nav-toggle {
     padding: .5em;
     background: transparent;
@@ -563,6 +564,7 @@ header {
 
 .intro {
     position: relative;
+    overflow: hidden;
 }
 
 .intro__img {
@@ -605,6 +607,7 @@ header {
 }
 @media (max-width: 600px) {
     .intro__img {
+    border: 3px solid #5c5c5ca4;
      max-width: 150px;
      float: right;
      position: absolute;
