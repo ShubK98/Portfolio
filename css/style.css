@@ -419,8 +419,7 @@ header {
                                       border-right:2px solid grey;
                                       border-left: 0px;
                                       color: var(--clr-dark);
-                                      border-top-right-radius: 5px;
-                                      border-bottom-right-radius: 5px;
+                                      border-radius: 5px;
                                       opacity: 0;
                                       left:60px;
                                       margin-top: 11px;
