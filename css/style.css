@@ -233,9 +233,13 @@ header {
 }
 .sickoi.fa-linkedin{
     background-color: #fdfdfd;
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 8px;
     color: #0072b1;
+    border-right: 4px solid #149696;
+    border-bottom: 4px solid #149696;
+    border-top: 4px solid #0a4869;
+    border-left: 4px solid #0d4a6b;
 }
 
 
