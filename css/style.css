@@ -153,6 +153,13 @@ h3 { font-size: var(--fs-h3) }
     display: block;
 }
 
+@media(min-width: 600px)
+{
+    .section__title--intro {
+        width: 80vh;
+    }
+}
+
 .section__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
@@ -220,12 +227,13 @@ header {
 
 .sicko{
     position: sticky;
-    bottom: 5px;
-    right: 10%;
+    /* position: absolute; */
+    bottom: 0;
+    /* right: 100px; */
     padding: 10px;
     font-size: 4em;
     float: right;
-    right: 0;
+    text-align: right;
     /* background-color: ; */
     height: fit-content;
     width: fit-content;
@@ -241,6 +249,13 @@ header {
     border-top: 4px solid #0a4869;
     border-left: 4px solid #0d4a6b;
 }
+
+@media (max-width: 600px)
+            {
+                .sicko{
+                    transform: scale(0.7);
+                }
+            }
 
 
 
@@ -685,8 +700,11 @@ header {
 /*  My services section  */
 
 .my-services {
-    background-color: var(--clr-dark);
-    background-image: url(../img/services-bg.jpg);
+    /* background-color: var(--clr-dark); */
+    /* background-color: rgb(98, 99, 100); */
+    background: rgb(79,79,79);
+    background: radial-gradient(circle, rgb(197, 197, 197) 30%, rgb(82, 82, 82) 100%);
+    /* background-image: url(../img/services-bg.jpg); */
     background-size: cover;
     /* background-blend-mode: multiply; */
     color: var(--clr-light);
@@ -694,8 +712,12 @@ header {
 }
 
 .section__title--services {
-    color: var(--clr-accent);
+    /* color: var(--clr-accent); */
+    /* background: radial-gradient(circle, rgb(197, 197, 197) 30%, rgba(82, 82, 82, 0.507) 100%); */
+    border-radius: 10px;
+    color: rgba(36, 36, 36, 0.781);
     position: relative;
+    padding-top: 10px;
 }
 
 .section__title--services::after {
@@ -721,7 +743,9 @@ header {
 
     padding: 20px 38px;
     border-radius: 8px;
-    border-right: 2px solid rgba(102, 102, 102, 0.63);
+    border-right: 2px solid #bdbdbda1;
+    border-bottom: 2px solid #bdbdbda1;
+
 }
 
 @media (min-width: 800px) {
@@ -768,7 +792,6 @@ header {
                                                                     {
                                                                         padding: 10px 10px 4px 10px;
                                                                         margin: 8px 0px 8px 0px;
-                                                                        border-bottom: 1px solid grey;
                                                                     }
                                                                 }
 
