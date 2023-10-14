@@ -227,10 +227,11 @@ header {
 }
 
 .sicko{
-    position: sticky;
-    /* position: absolute; */
-    bottom: 0;
-    /* right: 100px; */
+    position: absolute;
+    /* position: fixed; */
+    top: 5em;
+    /* left: 100px; */
+    right: 0;
     padding: 10px;
     font-size: 4em;
     float: right;
@@ -239,17 +240,50 @@ header {
     height: fit-content;
     width: fit-content;
     border-radius: 8px;
+
+    /* animation: sickoslide infinite ease-in-out 20s; */
 }
 .sickoi.fa-linkedin{
     background-color: #fdfdfd;
     border-radius: 12px;
     padding: 8px;
     color: #0072b1;
-    border-right: 4px solid #149696;
+    /* border: 1px solid grey; */
+    box-shadow: 2px 2px 4px grey;
+
+/* border-right: 4px solid #149696;
     border-bottom: 4px solid #149696;
     border-top: 4px solid #0a4869;
-    border-left: 4px solid #0d4a6b;
+    border-left: 4px solid #0d4a6b; */
 }
+
+/* @keyframes sickoslide
+{
+    0%
+    {
+        opacity: 1;
+    }
+
+    8%
+    {
+        opacity: 0;
+        display: none;
+    }
+    70%
+    {
+        opacity: 0;
+        display: none;
+    }
+    78%
+    {
+        opacity: 1;
+        display: block;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+} */
 
 @media (max-width: 600px)
             {
@@ -714,6 +748,7 @@ header {
     /* background-blend-mode: multiply; */
     color: var(--clr-light);
     text-align: center;
+    overflow-x: hidden;
 }
 
 .section__title--services {
