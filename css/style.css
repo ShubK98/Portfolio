@@ -255,6 +255,9 @@ header {
                 .sicko{
                     transform: scale(0.7);
                 }
+                .strngmstr{
+                    font-size: 16px;
+                }
             }
 
 
@@ -680,8 +683,9 @@ header {
 @media (max-width: 350px) {
     .intro__img {
     display: none;
-
     }
+
+    
    
                                                             }                                                            /*
 @media (max-width: 600px)
@@ -712,10 +716,10 @@ header {
 }
 
 .section__title--services {
-    /* color: var(--clr-accent); */
+    color: rgb(239, 252, 252);
     /* background: radial-gradient(circle, rgb(197, 197, 197) 30%, rgba(82, 82, 82, 0.507) 100%); */
     border-radius: 10px;
-    color: rgba(36, 36, 36, 0.781);
+    text-shadow: 4px 3px 4px rgba(0, 0, 0, 0.747);
     position: relative;
     padding-top: 10px;
 }
