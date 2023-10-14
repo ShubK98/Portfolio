@@ -161,6 +161,12 @@ h3 { font-size: var(--fs-h3) }
     }
 }
 
+@media(max-width: 600px)
+{
+    .section__title--intro {
+        font-size: 2.5em;
+    }
+}
 .section__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
@@ -227,16 +233,11 @@ header {
 }
 
 .sicko{
-    position: absolute;
-    /* position: fixed; */
-    top: 5em;
-    /* left: 100px; */
-    right: 0;
+    
     padding: 10px;
     font-size: 4em;
     float: right;
     text-align: right;
-    /* background-color: ; */
     height: fit-content;
     width: fit-content;
     border-radius: 8px;
@@ -257,42 +258,35 @@ header {
     border-left: 4px solid #0d4a6b; */
 }
 
-/* @keyframes sickoslide
-{
-    0%
-    {
-        opacity: 1;
-    }
 
-    8%
-    {
-        opacity: 0;
-        display: none;
-    }
-    70%
-    {
-        opacity: 0;
-        display: none;
-    }
-    78%
-    {
-        opacity: 1;
-        display: block;
-    }
-    100%
-    {
-        opacity: 1;
-    }
-} */
-
-@media (max-width: 600px)
+        @media (min-width: 600px)
+            {
+                .sicko
+                {
+                    position: absolute;
+                    /* top: 5em; */
+                    right: 16px;
+                }
+            }
+        @media (max-width: 600px)
             {
                 .sicko{
                     transform: scale(0.7);
+                    position: absolute;
+                    top: 28px;
+                    right: -2px;
+                    /* top: 2.5em; */
+                    /* bottom: -22px; */
+                    /* left: 3.8em; */
+                    /* min-width: 95vh; */
+                    /* text-align: center; */
+                    z-index: 88;
                 }
-                .strngmstr{
+                .strngmstr
+                {
                     font-size: 16px;
                 }
+                
             }
 
 
