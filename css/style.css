@@ -250,12 +250,10 @@ header {
     padding: 8px;
     color: #0072b1;
     /* border: 1px solid grey; */
-    box-shadow: 2px 2px 4px grey;
+    box-shadow: 2px 2px 4px grey;   
 
-/* border-right: 4px solid #149696;
-    border-bottom: 4px solid #149696;
-    border-top: 4px solid #0a4869;
-    border-left: 4px solid #0d4a6b; */
+    transition: 0.8s;
+    
 }
 
 
@@ -276,11 +274,10 @@ header {
                     top: 28px;
                     right: -2px;
                     /* top: 2.5em; */
-                    /* bottom: -22px; */
-                    /* left: 3.8em; */
-                    /* min-width: 95vh; */
-                    /* text-align: center; */
                     z-index: 88;
+                }
+
+                .sickoi.fa-linkedin{
                 }
                 .strngmstr
                 {
@@ -288,8 +285,6 @@ header {
                 }
                 
             }
-
-
 
 .nav {
     position: fixed;
@@ -513,46 +508,6 @@ header {
                                         }
                                     }             
 
-                         /*       .codepen span{ font-size: small;
-                                    position: relative;
-                                    min-width:70px;
-                                  
-                                   
-                                    background-color: yellow;
-                                }
-
-                              .In span{ font-size: small;
-                                position: absolute;
-                                min-width:70px;
-                                top: 156px;
-                                left: 70px;
-                               
-                                background-color: yellow;
-                                }
-
-
-                                .numb span{ font-size: small;
-                                    position: absolute;
-                                    min-width:100px;
-                                    top: 220px;
-                                    left: 70px;
-                                   
-                                    background-color: yellow;
-                              }
-
-                              .git span{ font-size: small;
-                                position: absolute;
-                                min-width:70px;
-                                top: 285px;
-                                left: 70px;
-                               
-                                background-color: yellow;
-                          }*/
-
-
-
-
-
 .nav__link {
     color: inherit;
     font-weight: var(--fw-bold);
@@ -747,11 +702,12 @@ header {
 
 .section__title--services {
     color: rgb(239, 252, 252);
-    /* background: radial-gradient(circle, rgb(197, 197, 197) 30%, rgba(82, 82, 82, 0.507) 100%); */
+    /* color: #000000; */
     border-radius: 10px;
     text-shadow: 4px 3px 4px rgba(0, 0, 0, 0.747);
     position: relative;
     padding-top: 10px;
+     
 }
 
 .section__title--services::after {
@@ -760,7 +716,7 @@ header {
     width: 2em;
     height: 1px;
     margin: 0.5em auto 1em;
-    background: var(--clr-light);
+    /* background: var(--clr-light); */
     opacity: 0.25;
 }
 
@@ -780,7 +736,7 @@ header {
     border-radius: 8px;
     /* border-right: 2px solid var(--clr-accent);
     border-bottom: 2px solid var(--clr-accent); */
-    box-shadow: 4px 4px 6px #bebebec0;
+    /* box-shadow: 4px 4px 6px #bebebec0; */
 
 }
 
@@ -1162,7 +1118,7 @@ opacity:0.7;
     background-color: #16e0bd;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-
+    font-size: 20px;
 }
 
 .upp{
@@ -1359,7 +1315,7 @@ span3{ font-size:large;
     overflow: hidden;
     transition: 500ms ease-in-out;
     white-space:nowrap;
-    animation: msgboio 8s ease-in;
+    animation: msgboio 20s ease-in;
     /* animation: msggrad 10s ease-in infinite alternate; */
     /**/
     background: #ffffff73;
@@ -1496,7 +1452,7 @@ span3{ font-size:large;
        height: 0;
     }
 
-    90%
+    94%
     {
         /* opacity: 0; */
         width: 0;
@@ -1515,6 +1471,10 @@ span3{ font-size:large;
         /* opacity: 1; */
         width: 1;
     }
+}
+
+.boldy{
+    
 }
 
 @keyframes msggrad
