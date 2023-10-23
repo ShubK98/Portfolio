@@ -940,7 +940,7 @@ header {
     padding-top: 8vw;
     padding-bottom: 7em;
 
-    border-bottom: 1em solid #6b6a6a69;
+    border-bottom: 1em solid #3f3f3f93;
 }
 
 .portfolio {
@@ -1122,7 +1122,7 @@ opacity:0.7;
 }
 
 .upp{
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
     position: absolute;
     right: 5%;
     padding:2px 16px ;
@@ -1132,12 +1132,12 @@ opacity:0.7;
     background-color: transparent;
     filter: blur();
     overflow: hidden;
-    border: 4px solid var(--clr-accent);
-    border-bottom:4px solid cornflowerblue;
-    border-right:4px solid cornflowerblue;
+    border: 2px solid var(--clr-accent);
+    /* border-bottom:4px solid cornflowerblue;
+    border-right:4px solid cornflowerblue; */
     border-radius: 50%;
     
-    box-shadow: 5px 5px 10px 0px var(--clr-accent);
+    /* box-shadow: 5px 5px 10px 0px var(--clr-accent); */
 }
 .upp:hover{
    transform: scale(0.96);
@@ -1148,10 +1148,10 @@ opacity:0.7;
 @media(max-width:600px)
 {
     .upp{
-        border: 4px solid white;
+        border: 1px solid var(--clr-accent);
         transform: scale(0.65);
-        box-shadow:0px 0px 40px 5px black;
-        color: whitesmoke;
+        box-shadow:0px 0px 40px 5px #0000006b;
+        color: var(--clr-accent);
     }
     .upp:hover{
         transform:scale(0.46);
@@ -1194,8 +1194,8 @@ opacity:0.7;
     border-radius: 5px;
 }
 
-.wall{
-    align-items: center;
+.wall{display: none;
+    /* align-items: center;
     text-align: center;
     background-image: url(../img/back2.jpg);
     background-size: cover;
@@ -1204,7 +1204,7 @@ opacity:0.7;
     border-top: 1em solid #686767ce;
     border-bottom: 1em solid #383838ce; 
     background-size: cover;
-    background-position:center center ;
+    background-position:center center ; */
 }
 @media(max-width:600px)
 {
