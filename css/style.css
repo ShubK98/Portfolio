@@ -256,6 +256,36 @@ header {
     
 }
 
+.narrow {
+  position: relative;
+  width: fit-content;
+  height: 30px;
+  /* background: whitesmoke; */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  border: 2px solid gray;
+  border-radius: 9px;
+
+  display: flex;                 /* Required for centering */
+  justify-content: center;      /* Horizontal center */
+  align-items: center;          /* Vertical center */
+    /* transform: ; */
+}
+
+@media (max-width: 600px){
+    .narrow{
+        display: none;
+    }
+}
+
+.narrow:hover{
+  border: 2px solid rgb(185, 185, 185);
+  background: rgba(43, 255, 255, 0.5);
+    transition:  550ms;
+
+}
+
 
         @media (min-width: 600px)
             {
@@ -633,7 +663,7 @@ header {
     }
     
     .intro__img {
-        grid-area: img;
+        /* grid-area: img; */
         min-width: 280px;
         position: relative;
         z-index: 2;
@@ -681,7 +711,7 @@ header {
         position: relative;
         z-index: 2;
     }    
-}                                                               */
+/* }                                                               */
 
 
 
@@ -1315,7 +1345,7 @@ span3{ font-size:large;
     overflow: hidden;
     transition: 500ms ease-in-out;
     white-space:nowrap;
-    animation: msgboio 20s ease-in;
+    animation: msgboio 7s ease-in;
     /* animation: msggrad 10s ease-in infinite alternate; */
     /**/
     background: #ffffff73;
@@ -1379,9 +1409,13 @@ span3{ font-size:large;
     font-size: larger;
     padding:0 1em;
     padding-top: 0.5em;
-    /*  */
-    
+
 }
+
+/* .msgboio-animate {
+  animation: msgboio 1s ease-in-out forwards;
+} */
+
 .crossboi strong
 {
     /* -webkit-text-stroke: 2px #383838; */
