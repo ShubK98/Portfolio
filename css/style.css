@@ -926,7 +926,9 @@ header {
         grid-area: img;
         position: relative;
         min-height: 300px;
-        min-width: 200px;
+  min-width: 210px;
+  object-fit: cover;   /* keeps proportions, zooms/crops */
+  object-position: center; /* keeps focus in the center */
         z-index: 2;
     }
 }
