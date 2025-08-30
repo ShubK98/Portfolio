@@ -50,6 +50,12 @@
 /* endable this to add smooth scrolling */
  html{
     scroll-behavior: smooth ;
+    zoom: 80%;
+
+  /* height: 100%; */
+  /* margin: 0;
+  padding: 0; */
+  overflow-y: auto;
  } 
 
 
@@ -60,7 +66,7 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
-
+    min-height: 100%;
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
        -khtml-user-select: none; /* Konqueror HTML */
@@ -929,7 +935,9 @@ header {
   min-width: 210px;
   object-fit: cover;   /* keeps proportions, zooms/crops */
   object-position: center; /* keeps focus in the center */
-        z-index: 2;
+        z-index: 0;
+        pointer-events: none;
+  user-select: none;
     }
 }
                                                             
@@ -1525,3 +1533,106 @@ span3{ font-size:large;
         background-position: right;
     }
 }
+
+
+    .workbook-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 300px); /* 3 columns each 220px wide */
+        grid-template-rows: repeat(2, 280px);   /* 2 rows, height can be adjusted */
+        gap: 24px 24px; /* row gap and column gap */
+        justify-content: center;
+        padding: 20px;
+    }
+    .workbook-card {
+        border: 1px solid #e0e0e0; 
+        border-radius: 8px; 
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 12px;
+        box-sizing: border-box;
+        box-shadow: grey 5px 5px 7px;
+        height: 100%; /* fill the grid cell */
+    }
+    .workbook-card img {
+        width: 100%;
+        height: 19  0px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+    .workbook-card a.title {
+        font-weight: bold;
+        font-size: 1em;
+        color: #3367d6;
+        margin-top: 8px;
+        text-decoration: none;
+    }
+    .workbook-card .author {
+        font-size: 0.95em;
+        color: #999;
+    }
+    .workbook-card .stats {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 0.9em;
+    }
+    .workbook-card .stats span i {
+        margin-right: 4px;
+    }
+
+    @media (max-width: 700px) {
+    .workbook-gallery {
+        display: grid;
+        grid-template-columns: 1fr !important; /* single column */
+        grid-template-rows: auto;
+        gap: 16px 0;
+        justify-content: center;
+        padding: 10px;
+    }
+    }
+
+    /* Initial collapsed state */
+    .Tableau_dash {
+    height: 0;
+    overflow: hidden;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    transition: height 0.4s ease;
+    background-color: rgb(207, 207, 207);
+    }
+
+    /* Hide children when collapsed */
+    .Tableau_dash.collapsed > * {
+    display: none;
+    }
+
+    /* Expanded state */
+    .Tableau_dash.expanded {
+    height: auto;
+    }
+
+    /* Show children when expanded */
+    .Tableau_dash.expanded > * {
+    /* display: block; or flex depending on your layout */
+    }
+
+
+
+
+    .toggle-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #3367d6;
+    color: white;
+    border-radius: 6px;
+    user-select: none;
+    }
