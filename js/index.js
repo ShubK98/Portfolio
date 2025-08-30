@@ -154,46 +154,6 @@ ConTogg.addEventListener('click', () => {
 //   }
   
 //   showcasePortfolio();
-const btn = document.getElementById('toggleBtn');
-const section = document.getElementById('tableauSection');
-let isExpanded = false;
-
-// On page load collapsed correctly
-section.classList.add('collapsed');
-
-btn.addEventListener('click', () => {
-  if (!isExpanded) {
-    section.classList.remove('collapsed');
-    section.classList.add('expanded');
-
-    // Explicitly set height to scrollHeight for transition effect
-    section.style.height = section.scrollHeight + 'px';
-
-    // After transition ends, reset height to auto for flexible content height
-    section.addEventListener('transitionend', () => {
-      if (section.classList.contains('expanded')) {
-        section.style.height = 'auto';
-      }
-    }, { once: true });
-
-    btn.textContent = 'Hide Dashboards';
-  } else {
-    // Start collapse animation by setting height to current height,
-    // then to zero, forcing transition
-    section.style.height = section.scrollHeight + 'px';
-    void section.offsetHeight;  // Force repaint
-    section.style.height = '0px';
-
-    section.classList.remove('expanded');
-    section.classList.add('collapsed');
-
-    btn.textContent = 'Show Dashboards';
-  }
-  isExpanded = !isExpanded;
-});
-
-
-
 
 
   document.getElementById('automate-link').onclick = function(e) {
@@ -208,7 +168,6 @@ btn.addEventListener('click', () => {
     // 1. Click on (class="boicloser")
     document.querySelector('.boicloser')?.click();
     await sleep(650);
-    // await sleep(650);
   
     // 2. Click on class="nav-toggle", 3s delay, click again
     const navToggle = document.querySelector('.nav-toggle');
