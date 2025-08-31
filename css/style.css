@@ -1537,8 +1537,8 @@ span3{ font-size:large;
 
     .workbook-gallery {
         display: grid;
-        grid-template-columns: repeat(3, 300px); /* 3 columns each 220px wide */
-        grid-template-rows: repeat(2, 280px);   /* 2 rows, height can be adjusted */
+        grid-template-columns: repeat(3, 400px); /* 3 columns each 220px wide */
+        grid-template-rows: repeat(2, 330px);   /* 2 rows, height can be adjusted */
         gap: 24px 24px; /* row gap and column gap */
         justify-content: center;
         padding: 20px;

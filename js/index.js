@@ -199,29 +199,28 @@ btn.addEventListener('click', () => {
   document.getElementById('automate-link').onclick = function(e) {
     e.preventDefault();
     showcasePortfolio();
-  };
+};
 
-  async function showcasePortfolio() {
+async function showcasePortfolio() {
     // Helper: sleep for ms milliseconds
     const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-  
+
     // 1. Click on (class="boicloser")
     document.querySelector('.boicloser')?.click();
     await sleep(650);
-    // await sleep(650);
-  
+
     // 2. Click on class="nav-toggle", 3s delay, click again
     const navToggle = document.querySelector('.nav-toggle');
     navToggle?.click();
     await sleep(350);
     navToggle?.click();
     await sleep(350);
-  
+
     // 3. Click on class="ContactMe" div
     const contactMe = document.querySelector('.ContactMe');
     contactMe?.click();
     await sleep(350);
-  
+
     // 4. Hover over all <li> in id="conlist" one by one, with delay
     const conlistItems = document.querySelectorAll('#conlist li');
     for (const li of conlistItems) {
@@ -229,20 +228,29 @@ btn.addEventListener('click', () => {
         await sleep(300);
         li.dispatchEvent(new MouseEvent('mouseleave', { bubbles: true }));
     }
-  
+
     // 5. Click on class="ContactMe" div again
     contactMe?.click();
     await sleep(400);
-  
-    // ⬇ REPLACEMENT for steps 6 - 12: Smooth scroll to footer, 4.5s
+
+    // Smooth scroll to footer
     const footer = document.querySelector('footer');
     if (footer) {
         footer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        await smoothScrollToFooter(5000); // ensure the scroll takes at least 4.5s
+        await smoothScrollToFooter(5000);
+    }
+
+    // BEFORE STEP 13: Click toggle button, wait 3 seconds, click again
+    const toggleBtn = document.getElementById('toggleBtn');
+    if (toggleBtn) {
+        toggleBtn.click();
+        footer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        await sleep(3000);
+        toggleBtn.click();
     }
 
     // 13. 2s delay and click on anchor tag class="upp"
-    await sleep(3800);
+    await sleep(2000);
     document.querySelector('a.upp')?.click();
 
     // 14. Run the msgboio animation on .boio element
@@ -252,10 +260,8 @@ btn.addEventListener('click', () => {
     }
 
     const Crosscloser = document.querySelector('.boicloser');
-            document.body.classList.toggle ('Closeboi');
+    document.body.classList.toggle('Closeboi');
 }
-
-
 
 async function smoothScrollToFooter(duration = 7000) {
     const footer = document.querySelector('footer');
@@ -280,10 +286,7 @@ async function smoothScrollToFooter(duration = 7000) {
         }
         requestAnimationFrame(step);
     });
-    
-
-    
-
 }
+
 
   // showcasePortfolio();
