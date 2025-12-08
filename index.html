@@ -27,7 +27,58 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw==" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" crossorigin="anonymous"></script>
-        
+        <script>
+(function() {
+  const domain = encodeURIComponent(window.location.hostname);
+  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const page_path = window.location.pathname;
+  const page_title = document.title;
+  const referrer = document.referrer;
+  
+  // Extract search query if coming from a search engine
+  let search_query = '';
+  if (referrer) {
+    try {
+      const url = new URL(referrer);
+      if (url.hostname.includes('google.com')) {
+        search_query = url.searchParams.get('q') || '';
+      } else if (url.hostname.includes('bing.com')) {
+        search_query = url.searchParams.get('q') || '';
+      } else if (url.hostname.includes('yahoo.com')) {
+        search_query = url.searchParams.get('p') || '';
+      } else if (url.hostname.includes('duckduckgo.com')) {
+        search_query = url.searchParams.get('q') || '';
+      }
+    } catch (e) {
+      // Invalid URL, ignore
+    }
+  }
+
+  fetch('https://visitor.6developer.com/visit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ 
+      domain, 
+      timezone,
+      page_path,
+      page_title,
+      referrer,
+      search_query
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Visitor count:', data);
+    // You can display the count on your page
+    if (document.getElementById('visitor-count')) {
+      document.getElementById('visitor-count').textContent = data.totalCount;
+    }
+  })
+  .catch(error => console.error('Error:', error));
+})();
+</script>
+
+
         <header>
             <div class="logo">
               <class="logo11"> S h u b </class>
@@ -42,6 +93,9 @@
                     <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
                     <li class="nav__item"><a href="#MyResu" class="nav__link">My Resume</a></li>
                     <li class="nav__item"><a href="#work" class="nav__link">My Skills</a></li>
+                    <div>
+  Visitor count: <div id="visitor-count">0</div>
+</div>
                 </ul>
             </nav>
         </header>
@@ -111,7 +165,7 @@
             <p id="tom" class="section__subtitle section__subtitle--intro">IT Analyst</p>
             <!-- <img src="img/mee.jpeg" alt="a pic of me " class="intro__img"> -->
 
-
+            
           
             
         </section>
@@ -130,7 +184,7 @@
                 <div class="service">
                     <h3>WORK EXPERIENCE</h3>
                     <hr>
-                    <p>3+ years of work experience in TATA Consultancy Services as a Software Dev, skills utilized JavaScript, React.JS, SQL, .NET Framework. I was assigned a Full-Stack Dev role in the same organization. </p>
+                    <p>3    + years of work experience in TATA Consultancy Services as a Software Dev, skills utilized JavaScript, React.JS, SQL, .NET Framework. I was assigned a Full-Stack Dev role in the same organization. </p>
                 </div> <!-- / service -->
                 
                 <div class="service">
