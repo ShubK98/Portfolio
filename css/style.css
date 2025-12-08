@@ -1620,8 +1620,8 @@ span3{ font-size:large;
     .Tableau_dash.expanded > * {
     /* display: block; or flex depending on your layout */
     }
-
-
+  
+    .ddd{ display: inline-block;}
 
 
     .toggle-btn {
