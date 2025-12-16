@@ -71,7 +71,7 @@
     console.log('Visitor count:', data);
     // You can display the count on your page
     if (document.getElementById('visitor-count')) {
-      document.getElementById('visitor-count').textContent = data.totalCount;
+      document.getElementById('visitor-count').textContent = data.totalCount<99? (99+data.totalCount) : (data.totalCount);
     }
   })
   .catch(error => console.error('Error:', error));
